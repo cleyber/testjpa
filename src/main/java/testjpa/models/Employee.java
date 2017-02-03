@@ -1,6 +1,6 @@
 package testjpa.models;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
@@ -25,12 +25,12 @@ public class Employee implements Serializable{
    private String lastNames;
 
    @Column(name = "BIRTHDATE")
-   private Date birthdate;
+   private LocalDate birthdate;
 
    public Employee(){
    }
 
-   public Employee(long cod, String name, String lastNames, Date birthdate){
+   public Employee(long cod, String name, String lastNames, LocalDate birthdate){
       this.cod = cod;
       this.name = name;
       this.lastNames = lastNames;
@@ -61,11 +61,11 @@ public class Employee implements Serializable{
       return lastNames;
    }
 
-   public void setBirthdate(Date birthdate){
+   public void setBirthdate(LocalDate birthdate){
       this.birthdate = birthdate;
    }
 
-   public Date getBirthdate(){
+   public LocalDate getBirthdate(){
       return birthdate;
    }
 
